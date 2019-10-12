@@ -1,0 +1,17 @@
+grammatiken
+
+<LEONA>  ::= <COMMAND> | ""
+
+<COMMAND> ::= <COMMAND><COMMAND>|
+            <MOVE>|
+            <STATE>|
+            <REP>
+<MOVE> ::= "FORW" "NUMBER" "PERIOD" |
+            "BACK" "NUMBER" "PERIOD"|
+            "LEFT" "NUMBER" "PERIOD"|
+            "RIGHT" "NUMBER" "PERIOD"
+<STATE> ::= "DOWN" "PERIOD"         |
+            "UP" "PERIOD"           |
+            "COLOR" "HEX" "PERIOD"
+<REP> ::= "REP" "NUMBER" <COMMAND>  |
+          "REP" "NUMBER" "QUOTE" <COMMAND> "QUOTE"
